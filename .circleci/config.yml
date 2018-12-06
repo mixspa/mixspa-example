@@ -1,0 +1,25 @@
+version: 2
+
+jobs:
+  deploy:
+    docker:
+      - image: circleci/node:6
+    working_directory: ~/mixspa-example
+    steps:
+      - checkout
+      - run:
+          name: Install & Build
+          command: bash ./ci/build.sh
+      - run:
+          name: Git deploy
+          command: bash ./ci/release.sh
+
+workflows:
+  version: 2
+  deploy:
+    jobs:
+      - deploy:
+          filters:
+            branches:
+              only:
+                - master
