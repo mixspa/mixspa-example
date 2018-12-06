@@ -12,7 +12,7 @@ jobs:
           command: bash ./ci/build.sh
       - run:
           name: Git deploy
-          command: bash ./ci/release.sh
+          command: bash ./ci/deploy.sh
 
 workflows:
   version: 2
