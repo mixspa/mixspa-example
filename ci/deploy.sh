@@ -17,6 +17,7 @@ fi
 git checkout -b gh-pages
 
 echo 'Commit & push package files'
+git add -f index.html
 git add -f dist/
 git commit -m "Update package files"
 git push origin gh-pages
