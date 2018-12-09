@@ -10,11 +10,8 @@ email=$(git log -1 --pretty=format:"%ae")
 git config user.name "$name"
 git config user.email "$email"
 
-echo 'Prepare git env'
-if [ `git branch | grep gh-pages` ]; then
-    git checkout gh-pages
-fi
-git checkout -b gh-pages
+echo 'Checkout to gh-pages'
+git checkout gh-pages
 
 echo "Copy files"
 cp -rf dist/* .
