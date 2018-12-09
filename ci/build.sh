@@ -23,4 +23,7 @@ do
    echo "App[${app}] finished."
 done
 
+echo 'Copy index.html file'
+cp "${rootdir}/index.html" "${rootdir}/dist/index.html"
+
 echo "Build done."
