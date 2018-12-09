@@ -16,9 +16,11 @@ if [ `git branch | grep gh-pages` ]; then
 fi
 git checkout -b gh-pages
 
+echo "Copy files"
+cp -rf dist/* .
+
 echo 'Commit & push package files'
-git add -f index.html
-git add -f dist/
+git add .
 git commit -m "Update package files"
 git push origin gh-pages
 
