@@ -1,0 +1,19 @@
+version: 2
+
+jobs:
+  deploy:
+    docker:
+      - image: circleci/node:6
+    working_directory: ~/mixspa-example
+    steps:
+      - checkout
+
+workflows:
+  version: 2
+  deploy:
+    jobs:
+      - deploy:
+          filters:
+            branches:
+              only:
+                - master
