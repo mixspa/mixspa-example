@@ -1,5 +1,5 @@
 {
-  "name": "react-router-app",
+  "name": "react-nav-app",
   "version": "0.1.0",
   "description": "A simple server stencil based on node and used jest for test",
   "main": "lib/index.js",
@@ -21,7 +21,7 @@
     "start:dev": "webpack-dev-server --config config/webpack.config.dev.js --open"
   },
   "dependencies": {
-    "@mixspa/loader": "^0.3.1",
+    "@mixspa/app": "^0.3.3",
     "classnames": "^2.2.6",
     "express": "^4.16.4",
     "morgan": "^1.9.1",

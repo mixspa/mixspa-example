@@ -715,10 +715,10 @@
     lodash "^4.17.10"
     to-fast-properties "^2.0.0"
 
-"@mixspa/loader@^0.3.1":
-  version "0.3.1"
-  resolved "https://registry.yarnpkg.com/@mixspa/loader/-/loader-0.3.1.tgz#a335b03f15d34f8819cb9753654f01fcc83bb619"
-  integrity sha512-7a8W64hs9jST5/77Z2kNCIxtxaWf6xOAfs3PVsEndsbx+i4OsmIxNsvnK/54Wm7TQ9L35PFnNxLfCC/e+kdx9A==
+"@mixspa/app@^0.3.3":
+  version "0.3.3"
+  resolved "https://registry.yarnpkg.com/@mixspa/app/-/app-0.3.3.tgz#06a2f59428b479f1ba78d2cf39773315959ec418"
+  integrity sha512-Lie/RBLxfoREnycV3coCkRU2333B4/wa29qHIHR/D2bClJAvxNJ7Qdr8ir6pDp9EtyLG9SfbqClomFsbnjB1Ww==
 
 "@types/node@*":
   version "10.12.12"

@@ -3,11 +3,12 @@
 set -e -u
 rootdir="$(cd $(dirname $0)/../ && pwd)"
 
-apps=("react-router-app")
+apps=("react-router-app" "react-nav-app")
 
 echo 'Prepare start...'
 
 echo 'Create dist folder'
+rm -rf "${rootdir}/dist"
 mkdir -p "${rootdir}/dist"
 
 echo 'Start to install'
