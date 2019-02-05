@@ -6,10 +6,9 @@ import { BrowserRouter } from 'react-router-dom';
 import App from './pages/App';
 
 MixspaLoader.addAppInfo({
+  tag: 'react-nav-app',
   name: 'ReactNavApp',
-  tagName: 'react-nav-app',
-  styles: [],
-  scripts: ['../react-nav-app/react-nav-app.bundle.js']
+  assets: ['../react-nav-app/react-nav-app.bundle.js']
 });
 
 ReactDOM.render(

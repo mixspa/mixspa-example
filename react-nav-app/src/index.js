@@ -6,10 +6,11 @@ import { BrowserRouter } from 'react-router-dom';
 import App from './App';
 
 MixspaApp.define({
-  name: 'react-nav-app',
+  tag: 'react-nav-app',
   render: (parentEl) => {
+    let url = parentEl.getAttribute('baseUrl') || '';
     ReactDOM.render(
-      <BrowserRouter>
+      <BrowserRouter basename={url}>
         <App />
       </BrowserRouter>,
       parentEl

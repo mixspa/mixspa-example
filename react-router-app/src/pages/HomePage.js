@@ -7,7 +7,7 @@ const HomePage = () => (
   <div>
     <div>Hello World</div>
     <div>
-      <AppLoader name="ReactNavApp"></AppLoader>
+      <AppLoader name="ReactNavApp" baseUrl="/react-router-app"></AppLoader>
     </div>
   </div>
 );

@@ -31,7 +31,7 @@ class AppLoader extends React.Component {
           isLoading ? (
             <span>Loading ...</span>
           ) : (
-            <appInfo.tagName {...rest} />
+            <appInfo.tag {...rest} />
           )
         }
       </div>
