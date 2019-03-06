@@ -1,0 +1,10 @@
+[
+  {
+    "id": "ReactAppHome",
+    "name": "React Spa App"
+  },
+  {
+    "id": "vue-apps",
+    "name": "Vue Spa App"
+  }
+]

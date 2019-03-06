@@ -1,0 +1,22 @@
+[
+  {
+    "id": "ReactNavApp",
+    "tag": "react-nav-app",
+    "assets": ["../react-nav-app/react-nav-app.bundle.js", "../react-nav-app/react-nav-app.bundle.css"]
+  },
+  {
+    "id": "ReactAppHome",
+    "tag": "react-app-home",
+    "assets": ["../react-app-home/react-app-home.bundle.js"]
+  },
+  {
+    "id": "ReactAppOne",
+    "tag": "react-app-one",
+    "assets": ["../react-app-one/react-app-one.bundle.js"]
+  },
+  {
+    "id": "ReactAppTwo",
+    "tag": "react-app-two",
+    "assets": ["../react-app-two/react-app-two.bundle.js"]
+  }
+]

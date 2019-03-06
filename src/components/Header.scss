@@ -1,0 +1,37 @@
+.header {
+  display: block;
+  width: 100%;
+  height: 60px;
+  padding: 0 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 8px #f0f1f2;
+
+  .menu {
+    display: block;
+
+    .item {
+      display: inline-block;
+      width: 150px;
+      height: 60px;
+      text-align: center;
+
+      .link {
+        display: inline-block;
+        text-decoration: none;
+        width: 100%;
+        height: 60px;
+        line-height: 60px;
+        color: #000;
+      }
+
+      &.activated, &:hover {
+        color: #1890ff;
+        border-top: 2px solid #1890ff;
+
+        .link {
+          color: #1890ff;
+        }
+      }
+    }
+  }
+}
