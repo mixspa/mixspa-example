@@ -14,7 +14,7 @@ echo 'Checkout to gh-pages'
 git checkout gh-pages
 
 echo "Copy files"
-cp -rf dist/* .
+yes | cp -rf dist/* .
 
 echo 'Commit & push package files'
 git add .
