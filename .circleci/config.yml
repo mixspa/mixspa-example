@@ -8,8 +8,11 @@ jobs:
     steps:
       - checkout
       - run:
-          name: Install & Build
-          command: bash ./ci/build.sh
+          name: Install
+          command: yarn install
+      - run:
+          name: Build
+          command: yarn build
       - run:
           name: Git deploy
           command: bash ./ci/deploy.sh
