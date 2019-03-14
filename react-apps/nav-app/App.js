@@ -4,7 +4,7 @@ import HomePage from './HomePage';
 
 const App = () => (
   <Switch>
-    <Route path="/mixspa-example/react-router-app" component={HomePage} />
+    <Route path="/" component={HomePage} />
   </Switch>
 );
 

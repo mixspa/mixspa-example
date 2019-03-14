@@ -1,22 +1,22 @@
 [
   {
-    "id": "ReactNavApp",
+    "id": "react-nav-app",
     "tag": "react-nav-app",
-    "assets": ["../react-nav-app/react-nav-app.bundle.js", "../react-nav-app/react-nav-app.bundle.css"]
+    "assets": ["../react-apps/react-nav-app.bundle.js", "../react-apps/react-nav-app.bundle.css"]
   },
   {
-    "id": "ReactAppHome",
-    "tag": "react-app-home",
-    "assets": ["../react-app-home/react-app-home.bundle.js"]
+    "id": "react-home-app",
+    "tag": "react-home-app",
+    "assets": ["../react-apps/react-home-app.bundle.js", "../react-apps/react-home-app.bundle.css"]
   },
   {
-    "id": "ReactAppOne",
+    "id": "react-app-one",
     "tag": "react-app-one",
-    "assets": ["../react-app-one/react-app-one.bundle.js"]
+    "assets": ["../react-apps/react-app-one.bundle.js", "../react-apps/react-app-one.bundle.css"]
   },
   {
-    "id": "ReactAppTwo",
+    "id": "react-app-two",
     "tag": "react-app-two",
-    "assets": ["../react-app-two/react-app-two.bundle.js"]
+    "assets": ["../react-apps/react-app-two.bundle.js", "../react-apps/react-app-two.bundle.css"]
   }
 ]

@@ -10,18 +10,22 @@ class Content {
   }
 
   onLoadApp(appInfo) {
+    console.log("Load success.");
+    console.log(appInfo);
     this.loading = false;
     this.appInfo = appInfo;
     this.render();
   }
 
   onLoadError(err) {
+    console.log("Load failure.");
     this.loading = false;
     this.error = err;
     this.render();
   }
 
   render() {
+    console.log("rendr");
     this.el.innerHTML = '';
     this.el.className = styles.content;
     this.el.append(this.loading ? this.renderLoading() : ( this.error ? this.renderError() : this.renderApp()));
@@ -43,8 +47,10 @@ class Content {
   }
 
   renderApp() {
+    console.log("render app");
     let appEL = document.createElement(this.appInfo.tag);
     appEL.className = styles.app;
+    console.log("render app after");
     return appEL;
   }
 }

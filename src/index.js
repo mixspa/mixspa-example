@@ -6,6 +6,6 @@ import entryList from './data/entryList.json';
 
 import './index.scss';
 
-appList.forEach(app => Mixspa.add(app));
+appList.forEach(app => Mixspa.register(app));
 
 document.getElementById('app').append(new HomePage(entryList).render());
