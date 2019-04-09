@@ -5,33 +5,20 @@ import style from './HomePage.scss';
 
 const Loading = () => <div>Loading ...</div>
 
-const HomePage = ({ match }) => {
-  console.log('===========');
-  console.log(match);
-  console.log('===========');
+const HomePage = ({ location }) => {
   return (
     <div className={ style.home }>
       <div className={ style.title }>Hello World</div>
       <div className={ style.header }>
-        <AppLoader appId="react-nav-app" baseUrl="/mixspa-example/react-router-app"><Loading/></AppLoader>
+        <AppLoader appId="react-nav-app" baseUrl={`${location.pathname}`}><Loading/></AppLoader>
       </div>
       <div className={ style.content }>
-        <Route path={`${match.url}/app-one`} render={props => {
-          console.log('===== one ====');
-          console.log(props);
-          console.log('===== one ====');
-          return (
-            <AppLoader appId="react-app-one" baseUrl="/mixspa-example/react-router-app/app-one"><Loading/></AppLoader>
-          )
-        }} />
-        <Route path={`${match.url}/app-two`} render={props => {
-          console.log('===== two ====');
-          console.log(props);
-          console.log('===== two ====');
-          return (
-            <AppLoader appId="react-app-two" baseUrl="/mixspa-example/react-router-app/app-two"><Loading/></AppLoader>
-          )
-        }} />
+        <Route path={`${location.pathName}/app-one`} >
+          <AppLoader appId="react-app-one" baseUrl="/mixspa-example/react-router-app/app-one"><Loading/></AppLoader>
+        </Route>
+        <Route path={`${location.pathname}/app-two`} >
+          <AppLoader appId="react-app-two" baseUrl="/mixspa-example/react-router-app/app-two"><Loading/></AppLoader>
+        </Route>
       </div>
     </div>
   )

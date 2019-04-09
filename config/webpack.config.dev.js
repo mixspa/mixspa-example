@@ -1,3 +1,4 @@
+const path = require('path');
 const merge = require('webpack-merge');
 const common = require('./webpack.common.js');
 
@@ -6,6 +7,8 @@ module.exports = merge(common, {
   devtool: 'inline-source-map',
   devServer: {
     port: 8002,
-    contentBase: './dist'
+    contentBase: path.join(__dirname, '../dist'),
+    openPage: 'mixspa-example/',
+    publicPath: '/mixspa-example/'
   }
 });

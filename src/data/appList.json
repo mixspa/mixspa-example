@@ -2,21 +2,21 @@
   {
     "id": "react-nav-app",
     "tag": "react-nav-app",
-    "assets": ["../react-apps/react-nav-app.bundle.js", "../react-apps/react-nav-app.bundle.css"]
+    "assets": ["../mixspa-example/react-apps/react-nav-app.bundle.js", "../mixspa-example/react-apps/react-nav-app.bundle.css"]
   },
   {
     "id": "react-home-app",
     "tag": "react-home-app",
-    "assets": ["../react-apps/react-home-app.bundle.js", "../react-apps/react-home-app.bundle.css"]
+    "assets": ["../mixspa-example/react-apps/react-home-app.bundle.js", "../mixspa-example/react-apps/react-home-app.bundle.css"]
   },
   {
     "id": "react-app-one",
     "tag": "react-app-one",
-    "assets": ["../react-apps/react-app-one.bundle.js", "../react-apps/react-app-one.bundle.css"]
+    "assets": ["../mixspa-example/react-apps/react-app-one.bundle.js", "../mixspa-example/react-apps/react-app-one.bundle.css"]
   },
   {
     "id": "react-app-two",
     "tag": "react-app-two",
-    "assets": ["../react-apps/react-app-two.bundle.js", "../react-apps/react-app-two.bundle.css"]
+    "assets": ["../mixspa-example/react-apps/react-app-two.bundle.js", "../mixspa-example/react-apps/react-app-two.bundle.css"]
   }
 ]
