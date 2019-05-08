@@ -1,13 +1,18 @@
 import { h } from 'preact';
+import classNames from 'classnames/bind';
 import styles from './Header.scss';
 
-const Header = ({ entries, onLinkClick }) => (
-  <div className={ styles.header }>
-    <ul className={ styles.menu }>
+let cx = classNames.bind(styles);
+
+const Header = ({ entries, activeId, onLinkClick }) => (
+  <div className={ cx('header') }>
+    <ul className={ cx('menu') }>
       {
         entries.map(entry => (
-          <li className={ styles.item }>
-            <a className={ styles.link } href="javascript:void" onclick={onLinkClick.bind(entry.id)}>{ entry.name }</a>
+          <li className={ cx('item', { activated: activeId === entry.id }) }>
+            <a className={ cx('link') } href="javascript:void" onclick={ () => onLinkClick(entry.id) }>
+              { entry.name }
+            </a>
           </li>
         ))
       }
