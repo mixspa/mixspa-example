@@ -3,12 +3,11 @@ import React from 'react';
 import { createApp } from '@mixspa/react';
 import { BrowserRouter } from 'react-router-dom';
 import App from './App';
-import './index.scss';
 
 createApp(
   'react-nav-app',
-  ({ baseUrl }) => (
-    <BrowserRouter basename={ baseUrl }>
+  ({ baseurl }) => (
+    <BrowserRouter basename={ baseurl }>
       <App />
     </BrowserRouter>
   )

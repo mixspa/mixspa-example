@@ -1,6 +1,9 @@
 import { h, Component } from 'preact';
 import Mixspa from '@mixspa/core';
+import classNames from 'classnames/bind';
 import styles from './Content.scss';
+
+let cx = classNames.bind(styles);
 
 class Content extends Component {
   constructor() {
@@ -18,19 +21,12 @@ class Content extends Component {
       .catch(err => this.setState({ loading: false, error: err }));
   }
 
-  componentDidUpdate() {
-    console.log("prepare render app: " + this.state.appInfo.tag);
-    let dom = document.createElement(this.state.appInfo.tag);
-    dom.className = styles.app;
-    dom.setAttribute("baseUrl", this.props.entry.url);
-    document.getElementById('InnerApp').append(dom);
-  }
-
   render(props, state) {
+    const { loading, appInfo, error } = state;
     return (
-      <div className={ styles.content }>
+      <div className={ cx('content') }>
         {
-          state.loading ? <div>Loading...</div> : <div id='InnerApp'/>
+          loading ? <div>Loading...</div> : <appInfo.tag className={ cx('app') } baseUrl={ props.entry.url }/>
         }
       </div>
     );

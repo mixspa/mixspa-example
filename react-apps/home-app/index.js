@@ -6,11 +6,14 @@ import App from './App';
 
 createApp(
   'react-home-app',
-  ({ baseUrl }) => (
-    <BrowserRouter basename={ baseUrl }>
-      <EventHolder>
-        <App />
-      </EventHolder>
-    </BrowserRouter>
-  )
+  ({ baseurl }) => {
+    console.log("render react with base url: " + baseurl);
+    return (
+      <BrowserRouter basename={ baseurl }>
+        <EventHolder>
+          <App />
+        </EventHolder>
+      </BrowserRouter>
+    );
+  }
 );
