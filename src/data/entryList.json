@@ -2,11 +2,11 @@
   {
     "id": "react-home-app",
     "name": "React Spa App",
-    "url": "/mixspa-example/react-apps/"
+    "url": "/react-apps/"
   },
   {
     "id": "vue-apps",
     "name": "Vue Spa App",
-    "url": "/mixspa-example/react-apps/"
+    "url": "/react-apps/"
   }
 ]

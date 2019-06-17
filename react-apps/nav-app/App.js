@@ -1,11 +1,21 @@
 import React from 'react';
-import { Route, Switch } from "react-router-dom";
-import HomePage from './HomePage';
+import { EventLink } from '@mixspa/react';
+import style from './App.scss';
 
 const App = () => (
-  <Switch>
-    <Route path="/" component={HomePage} />
-  </Switch>
+  <div className={ style.navBar }>
+    <ul>
+      <li>
+        <EventLink to="/">Home</EventLink>
+      </li>
+      <li>
+        <EventLink to="/app-one">App One</EventLink>
+      </li>
+      <li>
+        <EventLink to="/app-two">App Two</EventLink>
+      </li>
+    </ul>
+  </div>
 );
 
 export default App;

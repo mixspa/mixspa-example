@@ -1,11 +1,13 @@
 import React from 'react';
-import { Route, Switch } from "react-router-dom";
-import HomePage from './HomePage';
+import classNames from 'classnames/bind';
+import styles from './App.scss';
+
+let cx = classNames.bind(styles);
 
 const App = () => (
-  <Switch>
-    <Route path="/" component={HomePage} />
-  </Switch>
+  <div className={ cx('app') }>
+    <span>I am App Two</span>
+  </div>
 );
 
 export default App;

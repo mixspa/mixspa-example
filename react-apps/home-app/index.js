@@ -11,7 +11,7 @@ createApp(
     return (
       <BrowserRouter basename={ baseurl }>
         <EventHolder>
-          <App />
+          <App baseUrl={ baseurl }/>
         </EventHolder>
       </BrowserRouter>
     );

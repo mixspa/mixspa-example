@@ -26,13 +26,13 @@ module.exports = {
         test: /\.s?css$/,
         use: [
           { loader: MiniCssExtractPlugin.loader },
-          { loader: 'css-loader', options: { modules: true, localIdentName: '[name]__[local]-[hash:base64:5]' } },
+          { loader: 'css-loader', options: { modules: true, importLoaders: 2 } },
           {
             loader: 'postcss-loader',
             options: {
               ident: 'postcss',
               plugins: [
-                require('autoprefixer')({ browsers: ['> 0.01%'] })
+                require('postcss-preset-env')({ stage: 0 })
               ]
             }
           },
