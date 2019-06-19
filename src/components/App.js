@@ -19,11 +19,11 @@ const App = ({ baseUrl }) => {
       </div>
       <div className={ cx('content') }>
         <Switch>
-          <Route exact path={ `${baseUrl}/` }><HomePage /></Route>
+          <Route exact path="/"><HomePage /></Route>
           {
             entryList.map(entry => (
-              <Route path={ entry.url } >
-                <AppLoader appId={ entry.id }><Loading/></AppLoader>
+              <Route key={ entry.id } path={ entry.url } >
+                <AppLoader appId={ entry.id } baseUrl={ baseUrl }><Loading/></AppLoader>
               </Route>
             ))
           }
@@ -34,7 +34,7 @@ const App = ({ baseUrl }) => {
 };
 
 App.propTypes = {
-  entries: PropTypes.array
+  baseUrl: PropTypes.string
 };
 
 export default App;
