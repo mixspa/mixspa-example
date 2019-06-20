@@ -6,9 +6,12 @@ import App from './App';
 
 createApp(
   'react-nav-app',
-  ({ baseurl }) => (
-    <BrowserRouter basename={ baseurl }>
-      <App />
-    </BrowserRouter>
-  )
+  ({ baseurl }) => {
+    console.log("render react nav with base url: " + baseurl);
+    return (
+      <BrowserRouter basename={ baseurl }>
+        <App />
+      </BrowserRouter>
+    )
+  }
 );

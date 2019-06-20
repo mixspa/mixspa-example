@@ -23,7 +23,7 @@ const App = ({ baseUrl }) => {
           {
             entryList.map(entry => (
               <Route key={ entry.id } path={ entry.url } >
-                <AppLoader appId={ entry.id } baseUrl={ baseUrl }><Loading/></AppLoader>
+                <AppLoader appId={ entry.id } baseUrl={ `${baseUrl}${entry.url}` }><Loading/></AppLoader>
               </Route>
             ))
           }

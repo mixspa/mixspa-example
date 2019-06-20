@@ -13,15 +13,17 @@ const App = ({ baseUrl }) => {
   return (
     <div className={ cx('app') }>
       <div className={ cx('nav') }>
-        <AppLoader appId="react-nav-app" baseUrl={ baseUrl }><Loading/></AppLoader>
+        <AppLoader appId="react-nav-app" baseurl={ baseUrl }><Loading/></AppLoader>
       </div>
       <div className={ cx('content') }>
         <Switch>
-          <Route exact path={ `${baseUrl}` }><HomePage /></Route>
-          <Route path={ `${baseUrl}app-one` } >
+          <Route exact path="/"><HomePage /></Route>
+          <Route path="/app-one">
+            <div>app-one</div>
             <AppLoader appId="react-app-one"><Loading/></AppLoader>
           </Route>
-          <Route path={ `${baseUrl}app-two` } >
+          <Route path="/app-two">
+            <div>app-two</div>
             <AppLoader appId="react-app-two"><Loading/></AppLoader>
           </Route>
         </Switch>

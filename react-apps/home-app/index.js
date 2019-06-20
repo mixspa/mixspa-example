@@ -7,10 +7,10 @@ import App from './App';
 createApp(
   'react-home-app',
   ({ baseurl }) => {
-    console.log("render react with base url: " + baseurl);
+    console.log("render react home with base url: " + baseurl);
     return (
       <BrowserRouter basename={ baseurl }>
-        <EventHolder>
+        <EventHolder basename={ baseurl }>
           <App baseUrl={ baseurl }/>
         </EventHolder>
       </BrowserRouter>
