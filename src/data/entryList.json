@@ -5,8 +5,8 @@
     "url": "/react-apps"
   },
   {
-    "id": "vue-apps",
+    "id": "vue-home-app",
     "name": "Vue Spa App",
-    "url": "/react-apps"
+    "url": "/vue-apps"
   }
 ]

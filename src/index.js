@@ -2,6 +2,7 @@ import Mixspa from '@mixspa/core';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
+import { EventHolder } from '@mixspa/react';
 import App from './components/App';
 import appList from './data/appList.json';
 
@@ -15,7 +16,9 @@ Mixspa.on('mixspa:url:changed', (url) => {
 
 ReactDOM.render(
   <BrowserRouter basename="/mixspa-example">
-    <App baseUrl={ "/mixspa-example" } />
+    <EventHolder basename="/mixspa-example">
+      <App baseUrl={ "/mixspa-example" } />
+    </EventHolder>
   </BrowserRouter>,
   document.getElementById('app')
 );

@@ -1,4 +1,3 @@
-import '@babel/polyfill';
 import React from 'react';
 import { createApp } from '@mixspa/react';
 import { BrowserRouter } from 'react-router-dom';

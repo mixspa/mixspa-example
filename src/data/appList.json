@@ -18,5 +18,25 @@
     "id": "react-app-two",
     "tag": "react-app-two",
     "assets": ["/mixspa-example/react-apps/react-app-two.bundle.js", "/mixspa-example/react-apps/react-app-two.bundle.css"]
+  },
+  {
+    "id": "vue-home-app",
+    "tag": "vue-home-app",
+    "assets": ["/mixspa-example/vue-apps/vue-home-app.bundle.js", "/mixspa-example/vue-apps/vue-home-app.bundle.css"]
+  },
+  {
+    "id": "vue-nav-app",
+    "tag": "vue-nav-app",
+    "assets": ["/mixspa-example/vue-apps/vue-nav-app.bundle.js", "/mixspa-example/vue-apps/vue-nav-app.bundle.css"]
+  },
+  {
+    "id": "vue-app-one",
+    "tag": "vue-app-one",
+    "assets": ["/mixspa-example/vue-apps/vue-app-one.bundle.js", "/mixspa-example/vue-apps/vue-app-one.bundle.css"]
+  },
+  {
+    "id": "vue-app-two",
+    "tag": "vue-app-two",
+    "assets": ["/mixspa-example/vue-apps/vue-app-two.bundle.js", "/mixspa-example/vue-apps/vue-app-two.bundle.css"]
   }
 ]
