@@ -4,8 +4,7 @@ import App from './App.vue'
 
 Vue.config.productionTip = false
 
-createApp('vue-app-two', ({ baseurl }) => {
-  console.log('app two url:' + baseurl);
+createApp('vue-app-two', () => {
   return {
     render: h => h(App)
   };

@@ -9,7 +9,7 @@ createApp(
     console.log("render react nav with base url: " + baseurl);
     return (
       <BrowserRouter basename={ baseurl }>
-        <App />
+        <App baseUrl={ baseurl }/>
       </BrowserRouter>
     )
   }

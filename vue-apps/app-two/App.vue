@@ -2,6 +2,8 @@
   <div :class="$style.app">
     <h1>This is App Two</h1>
     <app-link base="/mixspa-example/react-apps" to="/">React App Home</app-link>
+    <app-link base="/mixspa-example/react-apps" to="/app-one">React App One</app-link>
+    <app-link base="/mixspa-example/react-apps" to="/app-two">React App Two</app-link>
   </div>
 </template>
 

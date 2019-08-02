@@ -1,21 +1,26 @@
 import React from 'react';
-import { EventLink } from '@mixspa/react';
+import PropTypes from 'prop-types';
+import { AppLink } from '@mixspa/react';
 import style from './App.scss';
 
-const App = () => (
+const App = ({ baseUrl }) => (
   <div className={ style.navBar }>
     <ul>
       <li>
-        <EventLink to="/">Home</EventLink>
+        <AppLink base={ baseUrl } to="/">Home</AppLink>
       </li>
       <li>
-        <EventLink to="/app-one">App One</EventLink>
+        <AppLink base={ baseUrl } to="/app-one">App One</AppLink>
       </li>
       <li>
-        <EventLink to="/app-two">App Two</EventLink>
+        <AppLink base={ baseUrl } to="/app-two">App Two</AppLink>
       </li>
     </ul>
   </div>
 );
+
+App.propTypes = {
+  baseUrl: PropTypes.string.isRequired
+};
 
 export default App;

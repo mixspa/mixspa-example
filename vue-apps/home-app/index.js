@@ -1,3 +1,4 @@
+import 'core-js/features/string/starts-with'
 import Vue from 'vue'
 import Mixspa from '@mixspa/core'
 import { createApp } from '@mixspa/vue'
@@ -11,8 +12,10 @@ createApp('vue-home-app', ({ baseurl }) => {
     router: router(baseurl),
     mounted() {
       Mixspa.onLink((url) => {
-        console.log('linked to: ' + url);
-        console.log(this.$router.push(url.substring(baseurl.length)));
+        if (url.startsWith(baseurl)) {
+          console.log('vue linked to: ' + url);
+          this.$router.push(url.substring(baseurl.length));
+        }
       });
     },
     render: h => h(App, { props: { baseUrl: baseurl } })

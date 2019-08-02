@@ -1,40 +1,42 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Route, Switch } from 'react-router-dom';
-import { AppLoader } from '@mixspa/react';
+import { withRouter } from 'react-router';
+import Mixspa from '@mixspa/core';
 import Menu from './Menu';
-import Loading from './Loading';
-import HomePage from './HomePage';
+import Content from './Content';
 import classNames from 'classnames/bind';
 import styles from './App.scss';
 import entryList from '../data/entryList.json';
 
 let cx = classNames.bind(styles);
 
-const App = ({ baseUrl }) => {
-  return (
-    <div className={ cx('app') }>
-      <div className={ cx('header') }>
-        <Menu entries={ entryList }/>
-      </div>
-      <div className={ cx('content') }>
-        <Switch>
-          <Route exact path="/"><HomePage /></Route>
-          {
-            entryList.map(entry => (
-              <Route key={ entry.id } path={ entry.url } >
-                <AppLoader appId={ entry.id } baseUrl={ `${baseUrl}${entry.url}` }><Loading/></AppLoader>
-              </Route>
-            ))
-          }
-        </Switch>
-      </div>
-    </div>
-  )
-};
+class App extends React.Component {
+  static propTypes = {
+    baseUrl: PropTypes.string,
+    history: PropTypes.object
+  };
 
-App.propTypes = {
-  baseUrl: PropTypes.string
-};
+  componentDidMount() {
+    Mixspa.onLink(url => {
+      if (url.startsWith(this.props.baseUrl)) {
+        console.log('main linked to: ' + url);
+        this.props.history.push(url.substring(this.props.baseUrl.length));
+      }
+    });
+  }
 
-export default App;
+  render() {
+    return (
+      <div className={ cx('app') }>
+        <div className={ cx('header') }>
+          <Menu entries={ entryList } baseUrl={ this.props.baseUrl }/>
+        </div>
+        <div className={ cx('main') }>
+          <Content entries={ entryList } baseUrl={ this.props.baseUrl }/>
+        </div>
+      </div>
+    );
+  }
+}
+
+export default withRouter(App);
