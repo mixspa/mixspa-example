@@ -11,12 +11,15 @@ createApp('vue-home-app', ({ baseurl }) => {
   return {
     router: router(baseurl),
     mounted() {
-      Mixspa.onLink((url) => {
+      this.listener = Mixspa.onLink((url) => {
         if (url.startsWith(baseurl)) {
           console.log('vue linked to: ' + url);
           this.$router.push(url.substring(baseurl.length));
         }
       });
+    },
+    beforeDestroy() {
+      Mixspa.offLink(this.listener);
     },
     render: h => h(App, { props: { baseUrl: baseurl } })
   };

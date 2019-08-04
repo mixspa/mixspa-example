@@ -10,7 +10,7 @@ let cx = classNames.bind(styles);
 const Menu = ({ baseUrl, entries, activeId }) => (
   <ul className={ cx('menu') }>
     <li className={ cx('item', { activated: !activeId }) }>
-      <Link className={ cx('link') } to="/" onClick={ () => this.onClick(null) }>Index</Link>
+      <Link className={ cx('link') } to="/">Index</Link>
     </li>
     {
       entries.map(entry => (

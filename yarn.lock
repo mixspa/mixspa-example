@@ -1054,17 +1054,17 @@
     "@types/istanbul-reports" "^1.1.1"
     "@types/yargs" "^12.0.9"
 
-"@mixspa/core@^0.5.0":
-  version "0.5.0"
-  resolved "https://registry.yarnpkg.com/@mixspa/core/-/core-0.5.0.tgz#319fe648cf10ae6ac3f797605f85a7d41e69f813"
-  integrity sha512-Lu9ny5yHPze853u5eAsy5bGFyQcAlqo/fyHwhEG1A/SqcXZixzNWv8YnyZSxddnQaydL0SIMk7pWYbGYaHSBCw==
+"@mixspa/core@^0.5.1":
+  version "0.5.1"
+  resolved "https://registry.yarnpkg.com/@mixspa/core/-/core-0.5.1.tgz#afbfdf779d848b53373e8b5be944c430150480c6"
+  integrity sha512-aP37H+ebJk7idI39CnC6iydM9xsI0vDuCwZs8mDr+Au9/cQIsYqT0fdTF/31RnM6zPQtODFN/EwuUhsZCrdWcw==
   dependencies:
-    "@mixspa/events" "^0.2.0"
+    "@mixspa/events" "^0.3.0"
 
-"@mixspa/events@^0.2.0":
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/@mixspa/events/-/events-0.2.0.tgz#7f4c29df50c577fe983a1930eb356d803859591c"
-  integrity sha512-phndmb966ysx0fZ2GncPudSWQJXvEBJ4cAHpHO94/HxODmXOD7h+ZJjNcwz6S47Vq8OtCoQfqEmbuH72ah4sTA==
+"@mixspa/events@^0.3.0":
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/@mixspa/events/-/events-0.3.0.tgz#155229675d8fb29dac9b7f18bd8faa1a79fe4c0f"
+  integrity sha512-u7uxcV8qQxDnDd0Pzgs5i2xS22tMZKDa/DCCv0P+6L8gZK1cfBeB/Q+Q60QOLv6C9DIRdfeFjRk0Hii2LnYdSw==
 
 "@mixspa/react@^0.6.0":
   version "0.6.0"

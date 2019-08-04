@@ -18,12 +18,16 @@ class App extends React.Component {
   };
 
   componentDidMount() {
-    Mixspa.onLink(url => {
+    this.listener = Mixspa.onLink(url => {
       if (url.startsWith(this.props.baseUrl)) {
         console.log('react linked to: ' + url);
         this.props.history.push(url.substring(this.props.baseUrl.length));
       }
     });
+  }
+
+  componentWillUnmount() {
+    Mixspa.offLink(this.listener);
   }
 
   render() {

@@ -13,11 +13,12 @@ let cx = classNames.bind(styles);
 class App extends React.Component {
   static propTypes = {
     baseUrl: PropTypes.string,
-    history: PropTypes.object
+    history: PropTypes.object,
+    location: PropTypes.object
   };
 
   componentDidMount() {
-    Mixspa.onLink(url => {
+    this.listener = Mixspa.onLink(url => {
       if (url.startsWith(this.props.baseUrl)) {
         console.log('main linked to: ' + url);
         this.props.history.push(url.substring(this.props.baseUrl.length));
@@ -25,11 +26,21 @@ class App extends React.Component {
     });
   }
 
+  componentWillUnmount() {
+    Mixspa.offLink(this.listener);
+  }
+
+  getActiveEntry() {
+    let subUrl = this.props.location.pathname;
+    return entryList.find((entry) => subUrl.startsWith(entry.url));
+  }
+
   render() {
+    let activeId = (this.getActiveEntry() || {}).id;
     return (
       <div className={ cx('app') }>
         <div className={ cx('header') }>
-          <Menu entries={ entryList } baseUrl={ this.props.baseUrl }/>
+          <Menu entries={ entryList } baseUrl={ this.props.baseUrl } activeId={ activeId }/>
         </div>
         <div className={ cx('main') }>
           <Content entries={ entryList } baseUrl={ this.props.baseUrl }/>
